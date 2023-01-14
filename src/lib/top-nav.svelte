@@ -8,16 +8,22 @@
 
   let open = false;
   let atTop = true;
+  let shouldOpen = true;
+  let lastScrollY = 0;
 
   onMount(() => {
-    atTop = globalThis.scrollY < 10;
-    document.addEventListener("scroll", () => {
-      atTop = globalThis.scrollY < 10;
+    atTop = scrollY == 0;
+    lastScrollY = scrollY;
+    document.addEventListener("scroll", (evt) => {
+      shouldOpen = lastScrollY > scrollY;
+
+      atTop = scrollY == 0;
+      lastScrollY = scrollY;
     });
   });
 </script>
 
-<nav data-at-top={atTop}>
+<nav data-at-top={atTop} data-should-open={shouldOpen}>
   <img src={logo.src} alt={logo.alt} class="logo" />
 
   <button class="open" on:click={() => (open = true)}> ☰ </button>
@@ -45,11 +51,21 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    transition-property: top;
+    transition-property: height top box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 
-    &[data-at-top="false"] {
+    z-index: 10;
+    background-color: rgba(var(--dark-primary), 0.85);
+    height: 100px;
+    backdrop-filter: blur(10px);
+
+    &[data-at-top="false"][data-should-open="true"] {
+      box-shadow: 0 10px 30px -10px rgb(43, 0, 44);
+      height: 60px;
+    }
+
+    &[data-should-open="false"] {
       top: -100px;
     }
 
@@ -58,7 +74,6 @@
 
     .logo {
       width: 48px;
-      margin-top: auto;
       margin-bottom: auto;
       padding: 12px;
     }

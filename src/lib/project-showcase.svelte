@@ -74,7 +74,7 @@
     .showcase-body {
       grid-row: 1 / -1;
 
-      z-index: 10;
+      z-index: 5;
     }
 
     &[data-show-right="false"] {

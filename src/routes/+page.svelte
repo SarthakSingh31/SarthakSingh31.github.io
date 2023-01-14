@@ -3,9 +3,10 @@
   import myuw_icon from "$lib/images/myuw-icon.png";
   import myuw_showcase from "$lib/images/myuw-showcase.png";
 
-  import ProjectShowcase from "../lib/project-showcase.svelte";
+  import ProjectShowcase from "$lib/project-showcase.svelte";
   import TopNav from "$lib/top-nav.svelte";
   import Intro from "$lib/intro.svelte";
+  import SectionHeading from "$lib/section-heading.svelte";
 </script>
 
 <svelte:head>
@@ -35,8 +36,12 @@
       <Intro />
     </section>
 
-    <section>
-      02. Some Things I've Built
+    <section class="content">
+      <SectionHeading>About Me</SectionHeading>
+    </section>
+
+    <section class="content">
+      <SectionHeading>Some Things I've Built</SectionHeading>
 
       <ProjectShowcase
         name="MyUW"
@@ -98,5 +103,16 @@
   section {
     max-width: 1000px;
     margin: auto;
+  }
+
+  .content {
+    counter-increment: content-section 1;
+
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // height: 100vh;
+
+    // margin: auto;
   }
 </style>
