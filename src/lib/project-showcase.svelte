@@ -44,6 +44,8 @@
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
 
+    margin-bottom: 16px;
+
     .showcase-image {
       grid-row: 1 / -1;
 

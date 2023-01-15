@@ -7,6 +7,7 @@
   import TopNav from "$lib/top-nav.svelte";
   import Intro from "$lib/intro.svelte";
   import SectionHeading from "$lib/section-heading.svelte";
+  import AboutMe from "$lib/about-me.svelte";
 </script>
 
 <svelte:head>
@@ -37,11 +38,12 @@
     </section>
 
     <section class="content">
-      <SectionHeading>About Me</SectionHeading>
+      <SectionHeading id="about">About Me</SectionHeading>
+      <AboutMe />
     </section>
 
     <section class="content">
-      <SectionHeading>Some Things I've Built</SectionHeading>
+      <SectionHeading id="showcase">Some Things I've Built</SectionHeading>
 
       <ProjectShowcase
         name="MyUW"
@@ -61,6 +63,14 @@
         icon=""
         showcase={{ src: myuw_showcase, alt: "Test" }}
       />
+    </section>
+    <section class="content">
+      <SectionHeading id="open-source">
+        My Open Source Contributions
+      </SectionHeading>
+    </section>
+    <section class="content">
+      <SectionHeading id="Contact Me">Contact Me</SectionHeading>
     </section>
   </div>
 </div>
@@ -96,8 +106,6 @@
   .outer-container {
     background-color: var(--dark-primary);
     color: var(--text-primary);
-
-    min-height: 100vh;
   }
 
   section {
@@ -108,10 +116,10 @@
   .content {
     counter-increment: content-section 1;
 
-    // display: flex;
+    display: flex;
     // justify-content: center;
-    // flex-direction: column;
-    // height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
 
     // margin: auto;
   }
