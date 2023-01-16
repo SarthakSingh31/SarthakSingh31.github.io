@@ -1,10 +1,12 @@
 <script lang="ts">
   export let name: string;
-  export let icon: string;
+  export let icon: { src: string; alt: string };
   export let showcase: {
     src: string;
     alt: string;
   };
+  export let links: { src: string; alt: string; link: string }[];
+  export let bottomIcons: { src: string; alt: string; link: string }[];
   export let showRight: boolean = false;
 </script>
 
@@ -13,28 +15,26 @@
     <img src={showcase.src} alt={showcase.alt} />
   </div>
   <div class="showcase-body">
-    test tset test test tset test tset test test test test test test test test
-    tset test tset test test tset test tset test test test test test test test
-    test tset test tset test test tset test tset test test test test test test
-    test test tset test tset test test tset test tset test test test test test
-    test test test tset test tset test test tset test tset test test test test
-    test test test test tset test tset test test tset test tset test test test
-    test test test test test tset test tset test test tset test tset test test
-    test test test test test test tset test tset test test tset test tset test
-    <!-- test test test test test test test tset test tset test test tset test tset
-    test test test test test test test test tset test tset test test tset test
-    tset test test test test test test test test tset test tset test test tset
-    test tset test test test test test test test test tset test tset test test
-    tset test tset test test test test test test test test tset test tset test
-    test tset test tset test test test test test test test test tset test tset
-    test test tset test tset test test test test test test test test tset test
-    tset test test tset test tset test test test test test test test test tset
-    test tset test test tset test tset test test test test test test test test
-    tset test tset test test tset test tset test test test test test test test
-    test tset test tset test test tset test tset test test test test test test
-    test test tset test tset test test tset test tset test test test test test
-    test test test tset test tset test test tset test tset test test test test
-    test test test test tset test tset test test -->
+    <div class="header">
+      <img src={icon.src} alt={icon.alt} class="logo-img" />
+      <span>{name}</span>
+    </div>
+    <p>
+      <slot />
+    </p>
+    <div class="footer">
+      {#each links as link}
+        <a href={link.link}>
+          <img src={link.src} alt={link.alt} class="link-img" />
+        </a>
+      {/each}
+      <span>|</span>
+      {#each bottomIcons as bottomIcon}
+        <a href={bottomIcon.link}>
+          <img src={bottomIcon.src} alt={bottomIcon.alt} />
+        </a>
+      {/each}
+    </div>
   </div>
 </li>
 
@@ -77,6 +77,42 @@
       grid-row: 1 / -1;
 
       z-index: 5;
+
+      .header {
+        display: flex;
+        align-items: center;
+
+        .logo-img {
+          width: 62px;
+        }
+
+        span {
+          font-size: 2vw;
+          padding-left: 16px;
+
+          font-family: "Raleway", sans-serif;
+        }
+      }
+
+      p {
+        background-color: #242f36;
+        padding: 12px;
+
+        border-radius: 4px;
+      }
+
+      .footer {
+        display: flex;
+
+        span {
+          padding-right: 8px;
+        }
+
+        img {
+          height: 24px;
+          padding-right: 8px;
+        }
+      }
     }
 
     &[data-show-right="false"] {

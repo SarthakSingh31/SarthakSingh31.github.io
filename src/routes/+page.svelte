@@ -1,7 +1,15 @@
 <script lang="ts">
   import androidLogo from "$lib/images/android-logo.ico";
-  import myuw_icon from "$lib/images/myuw-icon.png";
+  import myuw_icon from "$lib/images/myuw.png";
   import myuw_showcase from "$lib/images/myuw-showcase.png";
+  import vue_icon from "$lib/images/vue-logo.svg";
+  import play_store from "$lib/images/play-store-logo.png";
+  import github_logo_light from "$lib/images/github-logo-light.png";
+  import gcp_logo from "$lib/images/gcp-logo.svg";
+  import javascript_logo from "$lib/images/javascript.svg";
+  import bootstrap_logo from "$lib/images/bootstrap-logo.png";
+  import sass_logo from "$lib/images/sass.png";
+  import django_logo from "$lib/images/django-logo.png";
 
   import ProjectShowcase from "$lib/project-showcase.svelte";
   import TopNav from "$lib/top-nav.svelte";
@@ -47,22 +55,74 @@
 
       <ProjectShowcase
         name="MyUW"
-        icon={myuw_icon}
+        icon={{ src: myuw_icon, alt: "MyUW" }}
         showcase={{ src: myuw_showcase, alt: "MyUW home page" }}
-      />
+        links={[
+          {
+            src: github_logo_light,
+            alt: "Github",
+            link: "https://github.com/uw-it-aca/myuw",
+          },
+          {
+            src: play_store,
+            alt: "Play Store",
+            link: "https://play.google.com/store/apps/details?id=edu.uw.myuw_android",
+          },
+        ]}
+        bottomIcons={[
+          {
+            src: django_logo,
+            alt: "Django",
+            link: "https://www.djangoproject.com/",
+          },
+          {
+            src: javascript_logo,
+            alt: "JavaScript",
+            link: "https://www.javascript.com/",
+          },
+          { src: vue_icon, alt: "Vue.js", link: "https://vuejs.org/" },
+          {
+            src: bootstrap_logo,
+            alt: "Bootstrap",
+            link: "https://getbootstrap.com/",
+          },
+          {
+            src: sass_logo,
+            alt: "Sass Lang",
+            link: "https://sass-lang.com/",
+          },
+          {
+            src: gcp_logo,
+            alt: "Google Cloud Platform",
+            link: "https://cloud.google.com/",
+          },
+        ]}
+      >
+        The main student portal for the University of Washington. Provides the
+        students with a visual academic calendar, the latest notifcations, and
+        quick links to important pages.
+      </ProjectShowcase>
 
       <ProjectShowcase
         name="test"
-        icon=""
+        icon={{ src: myuw_icon, alt: "MyUW" }}
         showcase={{ src: myuw_showcase, alt: "Test" }}
+        links={[]}
+        bottomIcons={[]}
         showRight
-      />
+      >
+        TEst
+      </ProjectShowcase>
 
       <ProjectShowcase
         name="test"
-        icon=""
+        icon={{ src: myuw_icon, alt: "MyUW" }}
         showcase={{ src: myuw_showcase, alt: "Test" }}
-      />
+        links={[]}
+        bottomIcons={[]}
+      >
+        TEst
+      </ProjectShowcase>
     </section>
     <section class="content">
       <SectionHeading id="open-source">
