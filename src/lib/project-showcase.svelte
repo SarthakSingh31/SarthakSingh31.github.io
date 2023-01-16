@@ -44,7 +44,7 @@
     display: grid;
     grid-template-columns: repeat(7, minmax(0, 1fr));
 
-    margin-bottom: 16px;
+    margin-bottom: 32px;
 
     .showcase-image {
       grid-row: 1 / -1;
@@ -87,15 +87,16 @@
         }
 
         span {
-          font-size: 2vw;
+          font-size: 42px;
           padding-left: 16px;
+          padding-right: 16px;
 
           font-family: "Raleway", sans-serif;
         }
       }
 
       p {
-        background-color: #242f36;
+        background-color: #29353d;
         padding: 12px;
 
         border-radius: 4px;
@@ -134,6 +135,29 @@
       .showcase-body {
         grid-column-start: 4;
         grid-column-end: 8;
+
+        .header {
+          flex-direction: row-reverse;
+        }
+
+        p {
+          text-align: right;
+        }
+
+        .footer {
+          flex-direction: row-reverse;
+
+          span {
+            padding-right: 0px;
+            padding-left: 8px;
+          }
+
+          img {
+            height: 24px;
+            padding-right: 0px;
+            padding-left: 8px;
+          }
+        }
       }
     }
 

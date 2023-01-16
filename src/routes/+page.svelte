@@ -1,5 +1,5 @@
 <script lang="ts">
-  import androidLogo from "$lib/images/android-logo.ico";
+  import android_logo from "$lib/images/android-logo.ico";
   import myuw_icon from "$lib/images/myuw.png";
   import myuw_showcase from "$lib/images/myuw-showcase.png";
   import vue_icon from "$lib/images/vue-logo.svg";
@@ -10,6 +10,10 @@
   import bootstrap_logo from "$lib/images/bootstrap-logo.png";
   import sass_logo from "$lib/images/sass.png";
   import django_logo from "$lib/images/django-logo.png";
+  import spacescout_logo from "$lib/images/scout.png";
+  import scout_showcase from "$lib/images/scout-showcase.png";
+  import foodalert_logo from "$lib/images/foodalert.png";
+  import foodalert_showcase from "$lib/images/foodalert-showcase.png";
 
   import ProjectShowcase from "$lib/project-showcase.svelte";
   import TopNav from "$lib/top-nav.svelte";
@@ -29,7 +33,7 @@
 
 <div class="outer-container">
   <TopNav
-    logo={{ src: androidLogo, alt: "Test" }}
+    logo={{ src: android_logo, alt: "Test" }}
     navLinks={[
       { link: "#about", text: "About Me" },
       { link: "#showcase", text: "Showcase" },
@@ -104,24 +108,86 @@
       </ProjectShowcase>
 
       <ProjectShowcase
-        name="test"
-        icon={{ src: myuw_icon, alt: "MyUW" }}
-        showcase={{ src: myuw_showcase, alt: "Test" }}
-        links={[]}
-        bottomIcons={[]}
+        name="Scout"
+        icon={{ src: spacescout_logo, alt: "Scout" }}
+        showcase={{ src: scout_showcase, alt: "Scout" }}
+        links={[
+          {
+            src: github_logo_light,
+            alt: "Github",
+            link: "https://github.com/uw-it-aca/scout-android",
+          },
+          {
+            src: play_store,
+            alt: "Play Store",
+            link: "https://play.google.com/store/apps/details?id=edu.uw.UWScout",
+          },
+        ]}
+        bottomIcons={[
+          {
+            src: django_logo,
+            alt: "Django",
+            link: "https://www.djangoproject.com/",
+          },
+          {
+            src: javascript_logo,
+            alt: "JavaScript",
+            link: "https://www.javascript.com/",
+          },
+          {
+            src: android_logo,
+            alt: "Android",
+            link: "https://www.android.com/",
+          },
+          {
+            src: sass_logo,
+            alt: "Sass Lang",
+            link: "https://sass-lang.com/",
+          },
+        ]}
         showRight
       >
-        TEst
+        Provides students with an easily filterable list of places to study at
+        and borrow tech equipment from.
       </ProjectShowcase>
 
       <ProjectShowcase
-        name="test"
-        icon={{ src: myuw_icon, alt: "MyUW" }}
-        showcase={{ src: myuw_showcase, alt: "Test" }}
-        links={[]}
-        bottomIcons={[]}
+        name="FoodAlert"
+        icon={{ src: foodalert_logo, alt: "FoodAlert" }}
+        showcase={{ src: foodalert_showcase, alt: "FoodAlert" }}
+        links={[
+          {
+            src: github_logo_light,
+            alt: "Github",
+            link: "https://github.com/uw-it-aca/uw-foodalert/tree/develop",
+          },
+        ]}
+        bottomIcons={[
+          {
+            src: javascript_logo,
+            alt: "JavaScript",
+            link: "https://www.javascript.com/",
+          },
+          { src: vue_icon, alt: "Vue.js", link: "https://vuejs.org/" },
+          {
+            src: bootstrap_logo,
+            alt: "Bootstrap",
+            link: "https://getbootstrap.com/",
+          },
+          {
+            src: sass_logo,
+            alt: "Sass Lang",
+            link: "https://sass-lang.com/",
+          },
+          {
+            src: gcp_logo,
+            alt: "Google Cloud Platform",
+            link: "https://cloud.google.com/",
+          },
+        ]}
       >
-        TEst
+        Notifies the user of any food leftover from functions organized by the
+        university.
       </ProjectShowcase>
     </section>
     <section class="content">
@@ -130,7 +196,7 @@
       </SectionHeading>
     </section>
     <section class="content">
-      <SectionHeading id="Contact Me">Contact Me</SectionHeading>
+      <SectionHeading id="contact-me">Contact Me</SectionHeading>
     </section>
   </div>
 </div>
