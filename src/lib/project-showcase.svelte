@@ -39,6 +39,8 @@
 </li>
 
 <style lang="scss">
+  @import "../app.scss";
+
   .showcase-container {
     list-style: none;
     display: grid;
@@ -48,6 +50,7 @@
 
     .showcase-image {
       grid-row: 1 / -1;
+      display: flex;
 
       position: relative;
 
@@ -70,6 +73,9 @@
       img {
         max-width: 100%;
         height: auto;
+
+        margin-top: auto;
+        margin-bottom: auto;
       }
     }
 
@@ -116,54 +122,69 @@
       }
     }
 
-    &[data-show-right="false"] {
+    @include above-md {
+      &[data-show-right="false"] {
+        .showcase-image {
+          grid-column-start: 4;
+          grid-column-end: 8;
+        }
+        .showcase-body {
+          grid-column-start: 1;
+          grid-column-end: 5;
+        }
+      }
+
+      &[data-show-right="true"] {
+        .showcase-image {
+          grid-column-start: 1;
+          grid-column-end: 5;
+        }
+        .showcase-body {
+          grid-column-start: 4;
+          grid-column-end: 8;
+
+          .header {
+            flex-direction: row-reverse;
+          }
+
+          p {
+            text-align: right;
+          }
+
+          .footer {
+            flex-direction: row-reverse;
+
+            span {
+              padding-right: 0px;
+              padding-left: 8px;
+            }
+
+            img {
+              height: 24px;
+              padding-right: 0px;
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .showcase-image::before {
+          background-color: rgba(purple, 0);
+        }
+      }
+    }
+
+    @include below-md {
       .showcase-image {
-        grid-column-start: 4;
+        grid-column-start: 1;
         grid-column-end: 8;
       }
       .showcase-body {
         grid-column-start: 1;
-        grid-column-end: 5;
-      }
-    }
-
-    &[data-show-right="true"] {
-      .showcase-image {
-        grid-column-start: 1;
-        grid-column-end: 5;
-      }
-      .showcase-body {
-        grid-column-start: 4;
         grid-column-end: 8;
 
-        .header {
-          flex-direction: row-reverse;
-        }
-
-        p {
-          text-align: right;
-        }
-
-        .footer {
-          flex-direction: row-reverse;
-
-          span {
-            padding-right: 0px;
-            padding-left: 8px;
-          }
-
-          img {
-            height: 24px;
-            padding-right: 0px;
-            padding-left: 8px;
-          }
-        }
-      }
-    }
-
-    &:hover {
-      .showcase-image::before {
-        background-color: rgba(purple, 0);
+        padding: 16px;
       }
     }
   }

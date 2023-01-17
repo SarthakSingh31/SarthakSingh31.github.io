@@ -186,7 +186,7 @@
           },
         ]}
       >
-        Notifies the user of any food leftover from functions organized by the
+        Notifies the user of any food leftover from events organized by the
         university.
       </ProjectShowcase>
     </section>
