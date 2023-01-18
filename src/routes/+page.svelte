@@ -20,6 +20,7 @@
   import Intro from "$lib/intro.svelte";
   import SectionHeading from "$lib/section-heading.svelte";
   import AboutMe from "$lib/about-me.svelte";
+  import ContactMe from "$lib/contact-me.svelte";
 </script>
 
 <svelte:head>
@@ -197,6 +198,7 @@
     </section>
     <section class="content">
       <SectionHeading id="contact-me">Contact Me</SectionHeading>
+      <ContactMe />
     </section>
   </div>
 </div>
@@ -213,6 +215,8 @@
     --dark-primary: #221c35;
     --light-primary: #c5b4e3;
     --light-primary-tint: rgba(#c5b4e3, 0.3);
+
+    --black: #0d1117;
 
     --text-primary: white;
     --text-secondary: #c5b4e3;
@@ -245,7 +249,7 @@
     display: flex;
     // justify-content: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 90vh;
 
     // margin: auto;
   }
