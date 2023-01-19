@@ -1,0 +1,180 @@
+{
+  "src/lib/images/android-logo.ico": {
+    "file": "_app/immutable/assets/android-logo-1095c9b2.ico",
+    "src": "src/lib/images/android-logo.ico"
+  },
+  "src/lib/images/myuw.png": {
+    "file": "_app/immutable/assets/myuw-7f022a42.png",
+    "src": "src/lib/images/myuw.png"
+  },
+  "src/lib/images/myuw-showcase.png": {
+    "file": "_app/immutable/assets/myuw-showcase-028397df.png",
+    "src": "src/lib/images/myuw-showcase.png"
+  },
+  "src/lib/images/vue-logo.svg": {
+    "file": "_app/immutable/assets/vue-logo-52c3881c.svg",
+    "src": "src/lib/images/vue-logo.svg"
+  },
+  "src/lib/images/play-store-logo.png": {
+    "file": "_app/immutable/assets/play-store-logo-ba3a9390.png",
+    "src": "src/lib/images/play-store-logo.png"
+  },
+  "src/lib/images/gcp-logo.svg": {
+    "file": "_app/immutable/assets/gcp-logo-6e4c21f4.svg",
+    "src": "src/lib/images/gcp-logo.svg"
+  },
+  "src/lib/images/javascript.svg": {
+    "file": "_app/immutable/assets/javascript-3691c274.svg",
+    "src": "src/lib/images/javascript.svg"
+  },
+  "src/lib/images/bootstrap-logo.png": {
+    "file": "_app/immutable/assets/bootstrap-logo-2d78d65d.png",
+    "src": "src/lib/images/bootstrap-logo.png"
+  },
+  "src/lib/images/sass.png": {
+    "file": "_app/immutable/assets/sass-b6cfca0b.png",
+    "src": "src/lib/images/sass.png"
+  },
+  "src/lib/images/scout.png": {
+    "file": "_app/immutable/assets/scout-607d7517.png",
+    "src": "src/lib/images/scout.png"
+  },
+  "src/lib/images/scout-showcase.png": {
+    "file": "_app/immutable/assets/scout-showcase-5c84f907.png",
+    "src": "src/lib/images/scout-showcase.png"
+  },
+  "src/lib/images/foodalert.png": {
+    "file": "_app/immutable/assets/foodalert-95dc2911.png",
+    "src": "src/lib/images/foodalert.png"
+  },
+  "src/lib/images/foodalert-showcase.png": {
+    "file": "_app/immutable/assets/foodalert-showcase-0c29c63d.png",
+    "src": "src/lib/images/foodalert-showcase.png"
+  },
+  "src/lib/images/me.png": {
+    "file": "_app/immutable/assets/me-6c432818.png",
+    "src": "src/lib/images/me.png"
+  },
+  "src/lib/images/github-book.svg": {
+    "file": "_app/immutable/assets/github-book-082b6237.svg",
+    "src": "src/lib/images/github-book.svg"
+  },
+  "src/lib/images/github-star.svg": {
+    "file": "_app/immutable/assets/github-star-d468db48.svg",
+    "src": "src/lib/images/github-star.svg"
+  },
+  "src/lib/images/github-fork.svg": {
+    "file": "_app/immutable/assets/github-fork-1b96312a.svg",
+    "src": "src/lib/images/github-fork.svg"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-52198a63.css",
+    "src": "src/routes/+page.css"
+  },
+  "__layout-da46b06b.js": {
+    "file": "_app/immutable/chunks/_layout-da46b06b.js"
+  },
+  "_singletons-070a06ab.js": {
+    "file": "_app/immutable/chunks/singletons-070a06ab.js",
+    "imports": [
+      "_index-8f3be66c.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "_app/immutable/components/error.svelte-62771ea8.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-8f3be66c.js",
+      "_singletons-070a06ab.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-0b34d6bb.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "_app/immutable/chunks/0-0aecf08b.js",
+    "src": ".svelte-kit/generated/nodes/0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__layout-da46b06b.js",
+      "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte"
+    ]
+  },
+  "src/routes/+layout.ts": {
+    "file": "_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
+    "src": "src/routes/+layout.ts",
+    "isEntry": true,
+    "imports": [
+      "__layout-da46b06b.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
+    "file": "_app/immutable/start-2150a9e7.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-8f3be66c.js",
+      "_singletons-070a06ab.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/nodes/0.js",
+      ".svelte-kit/generated/nodes/1.js",
+      ".svelte-kit/generated/nodes/2.js"
+    ]
+  },
+  "_index-8f3be66c.js": {
+    "file": "_app/immutable/chunks/index-8f3be66c.js"
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-a45760cf.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
+    "file": "_app/immutable/components/layout.svelte-66c1fb0b.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-8f3be66c.js"
+    ]
+  },
+  "src/routes/+page.svelte": {
+    "file": "_app/immutable/components/pages/_page.svelte-10655639.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-8f3be66c.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-52198a63.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/android-logo-1095c9b2.ico",
+      "_app/immutable/assets/myuw-7f022a42.png",
+      "_app/immutable/assets/myuw-showcase-028397df.png",
+      "_app/immutable/assets/vue-logo-52c3881c.svg",
+      "_app/immutable/assets/play-store-logo-ba3a9390.png",
+      "_app/immutable/assets/gcp-logo-6e4c21f4.svg",
+      "_app/immutable/assets/javascript-3691c274.svg",
+      "_app/immutable/assets/bootstrap-logo-2d78d65d.png",
+      "_app/immutable/assets/sass-b6cfca0b.png",
+      "_app/immutable/assets/scout-607d7517.png",
+      "_app/immutable/assets/scout-showcase-5c84f907.png",
+      "_app/immutable/assets/foodalert-95dc2911.png",
+      "_app/immutable/assets/foodalert-showcase-0c29c63d.png",
+      "_app/immutable/assets/me-6c432818.png",
+      "_app/immutable/assets/github-book-082b6237.svg",
+      "_app/immutable/assets/github-star-d468db48.svg",
+      "_app/immutable/assets/github-fork-1b96312a.svg"
+    ]
+  }
+}
