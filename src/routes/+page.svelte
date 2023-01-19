@@ -21,13 +21,14 @@
   import SectionHeading from "$lib/section-heading.svelte";
   import AboutMe from "$lib/about-me.svelte";
   import ContactMe from "$lib/contact-me.svelte";
+  import OpenSource from "$lib/open-source.svelte";
 </script>
 
 <svelte:head>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Mono&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Mono:wght@400;600&display=swap"
     rel="stylesheet"
   />
 </svelte:head>
@@ -195,6 +196,7 @@
       <SectionHeading id="open-source">
         My Open Source Contributions
       </SectionHeading>
+      <OpenSource />
     </section>
     <section class="content">
       <SectionHeading id="contact-me">Contact Me</SectionHeading>
@@ -216,6 +218,9 @@
     --light-primary: #c5b4e3;
     --light-primary-tint: rgba(#c5b4e3, 0.3);
 
+    --red: #f85149;
+    --green: #3fb950;
+    --muted: rgba(110, 118, 129, 0.4);
     --black: #0d1117;
 
     --text-primary: white;

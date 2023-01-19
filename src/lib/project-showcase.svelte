@@ -102,7 +102,8 @@
       }
 
       p {
-        background-color: #29353d;
+        // background-color: #29353d;
+        background-color: var(--black);
         padding: 12px;
 
         border-radius: 4px;
