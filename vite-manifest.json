@@ -68,28 +68,11 @@
     "src": "src/lib/images/github-fork.svg"
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-52198a63.css",
+    "file": "_app/immutable/assets/_page-50fb2b49.css",
     "src": "src/routes/+page.css"
   },
-  "_singletons-070a06ab.js": {
-    "file": "_app/immutable/chunks/singletons-070a06ab.js",
-    "imports": [
-      "_index-8f3be66c.js"
-    ]
-  },
-  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
-    "file": "_app/immutable/components/layout.svelte-66c1fb0b.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-8f3be66c.js"
-    ]
-  },
-  "_index-8f3be66c.js": {
-    "file": "_app/immutable/chunks/index-8f3be66c.js"
-  },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-0b34d6bb.js",
+    "file": "_app/immutable/chunks/2-e6cdda20.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -105,23 +88,6 @@
       "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte"
     ]
   },
-  ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-a45760cf.js",
-    "src": ".svelte-kit/generated/nodes/1.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
-    ]
-  },
-  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-62771ea8.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-8f3be66c.js",
-      "_singletons-070a06ab.js"
-    ]
-  },
   "src/routes/+layout.ts": {
     "file": "_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
     "src": "src/routes/+layout.ts",
@@ -130,11 +96,22 @@
       "__layout-da46b06b.js"
     ]
   },
-  "__layout-da46b06b.js": {
-    "file": "_app/immutable/chunks/_layout-da46b06b.js"
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-a45760cf.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    ]
+  },
+  "_singletons-070a06ab.js": {
+    "file": "_app/immutable/chunks/singletons-070a06ab.js",
+    "imports": [
+      "_index-8f3be66c.js"
+    ]
   },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-2150a9e7.js",
+    "file": "_app/immutable/start-719bbacd.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -147,15 +124,38 @@
       ".svelte-kit/generated/nodes/2.js"
     ]
   },
+  "_index-8f3be66c.js": {
+    "file": "_app/immutable/chunks/index-8f3be66c.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
+    "file": "_app/immutable/components/layout.svelte-66c1fb0b.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-8f3be66c.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "_app/immutable/components/error.svelte-62771ea8.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-8f3be66c.js",
+      "_singletons-070a06ab.js"
+    ]
+  },
+  "__layout-da46b06b.js": {
+    "file": "_app/immutable/chunks/_layout-da46b06b.js"
+  },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-10655639.js",
+    "file": "_app/immutable/components/pages/_page.svelte-ff028f93.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-8f3be66c.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-52198a63.css"
+      "_app/immutable/assets/_page-50fb2b49.css"
     ],
     "assets": [
       "_app/immutable/assets/android-logo-1095c9b2.ico",
