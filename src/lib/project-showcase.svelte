@@ -8,10 +8,16 @@
   export let links: { src: string; alt: string; link: string }[];
   export let bottomIcons: { src: string; alt: string; link: string }[];
   export let showRight: boolean = false;
+
+  let showModal = false;
 </script>
 
 <li class="showcase-container" data-show-right={showRight}>
-  <div class="showcase-image">
+  <div
+    class="showcase-image"
+    on:click={() => (showModal = !showModal)}
+    on:keypress={() => (showModal = !showModal)}
+  >
     <img src={showcase.src} alt={showcase.alt} />
   </div>
   <div class="showcase-body">
@@ -34,6 +40,21 @@
           <img src={bottomIcon.src} alt={bottomIcon.alt} />
         </a>
       {/each}
+    </div>
+  </div>
+  <div
+    class="modal"
+    data-show={showModal}
+    aria-hidden={!showModal}
+    on:click={() => (showModal = false)}
+  >
+    <div
+      class="modal-content"
+      on:click={(evt) => evt.stopPropagation()}
+      on:keypress={(evt) => evt.stopPropagation()}
+    >
+      <button class="close" on:click={() => (showModal = false)}> ✕ </button>
+      <img src={showcase.src} alt={showcase.alt} />
     </div>
   </div>
 </li>
@@ -169,9 +190,13 @@
         }
       }
 
-      &:hover {
-        .showcase-image::before {
-          background-color: rgba(purple, 0);
+      .showcase-image {
+        cursor: pointer;
+
+        &:hover {
+          &::before {
+            background-color: rgba(purple, 0);
+          }
         }
       }
     }
@@ -187,6 +212,65 @@
 
         padding: 16px;
       }
+    }
+
+    .modal {
+      transition-property: top;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+
+      display: flex;
+      z-index: 20;
+
+      width: 100vw;
+      height: 100vh;
+
+      overflow-y: scroll;
+
+      background-color: rgba(black, 0.4);
+
+      .modal-content {
+        background-color: black;
+
+        padding: 16px;
+
+        margin: 16px auto;
+        width: 80vw;
+
+        button {
+          background-color: unset;
+          border: unset;
+
+          color: var(--text-primary);
+          font-size: 24px;
+
+          float: right;
+          padding-bottom: 8px;
+
+          cursor: pointer;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .modal[data-show="false"] {
+      // display: none;
+      position: fixed;
+      top: -100vh;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .modal[data-show="true"] {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 </style>
