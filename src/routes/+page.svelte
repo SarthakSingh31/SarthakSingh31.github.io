@@ -206,6 +206,8 @@
 </div>
 
 <style lang="scss">
+  @import "../app.scss";
+
   :global(:root) {
     --sm-break-point: 576px;
     --md-break-point: 768px;
@@ -235,7 +237,12 @@
   }
 
   .main-container {
-    padding: 0 50px;
+    @include above-sm {
+      padding: 0 50px;
+    }
+    @include below-sm {
+      padding: 0 20px;
+    }
   }
 
   .outer-container {

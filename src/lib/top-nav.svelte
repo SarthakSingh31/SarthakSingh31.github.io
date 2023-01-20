@@ -169,6 +169,8 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 150ms;
 
+        padding: 16px;
+
         &[data-open="true"] {
           right: 0px;
         }
