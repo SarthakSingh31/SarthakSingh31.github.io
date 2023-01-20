@@ -74,6 +74,7 @@
         font-size: 32px;
 
         margin-top: 32px;
+        margin-bottom: 32px;
         padding: 16px;
         line-height: 1;
         background: none;
