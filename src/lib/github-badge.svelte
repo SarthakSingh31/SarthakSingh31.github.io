@@ -46,6 +46,8 @@
 </li>
 
 <style lang="scss">
+  @import "../app.scss";
+
   .container {
     list-style: none;
     background-color: var(--black);
@@ -62,8 +64,14 @@
     }
 
     .header {
-      display: flex;
-      justify-content: space-between;
+      @include above-sm {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @include below-sm {
+        margin-bottom: 8px;
+      }
 
       .link {
         margin-bottom: 8px;

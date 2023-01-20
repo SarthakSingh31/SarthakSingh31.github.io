@@ -43,7 +43,9 @@
     }
 
     .content {
-      margin-right: 32px;
+      @include above-sm {
+        margin-right: 32px;
+      }
       text-align: justify;
     }
 
@@ -59,7 +61,7 @@
       }
 
       @include below-sm {
-        margin-bottom: 16px;
+        margin: 16px;
       }
     }
   }

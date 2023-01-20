@@ -74,6 +74,7 @@
 
     .logo {
       width: 48px;
+      margin-top: auto;
       margin-bottom: auto;
       padding: 12px;
     }
@@ -152,6 +153,8 @@
         color: var(--text-primary);
 
         font-size: 36px;
+
+        margin-right: 16px;
       }
 
       .links {
