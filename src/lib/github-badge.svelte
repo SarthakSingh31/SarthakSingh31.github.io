@@ -2,6 +2,7 @@
   import githubBook from "$lib/images/github-book.svg";
   import githubStar from "$lib/images/github-star.svg";
   import githubFork from "$lib/images/github-fork.svg";
+  import githubPR from "$lib/images/github-pr.svg";
 
   export let domain: { org: string; repo: string };
   export let lines: { added: number; removed: number };
@@ -36,12 +37,19 @@
     <slot />
   </div>
   <div class="footer">
-    <span>
-      <span class="dot" style="background-color: {languageDot.color}" />
-      {languageDot.name}
-    </span>
-    <span><img src={githubStar} alt="stars" /> {stars}</span>
-    <span><img src={githubFork} alt="forks" /> {forks}</span>
+    <div>
+      <span>
+        <span class="dot" style="background-color: {languageDot.color}" />
+        {languageDot.name}
+      </span>
+      <span><img src={githubStar} alt="stars" /> {stars}</span>
+      <span><img src={githubFork} alt="forks" /> {forks}</span>
+    </div>
+    <a
+      href="https://github.com/{domain.org}/{domain.repo}/pulls?q=is%3Apr+author%3ASarthakSingh31"
+    >
+      <img src={githubPR} alt="Pull Requests" />
+    </a>
   </div>
 </li>
 
@@ -135,13 +143,26 @@
       color: var(--text-slate);
     }
 
-    .dot {
-      width: 16px;
-      height: 16px;
-      display: inline-block;
-      border-radius: 8px;
+    .footer {
+      display: flex;
+      justify-content: space-between;
 
-      vertical-align: sub;
+      .dot {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 8px;
+
+        vertical-align: sub;
+      }
+
+      a {
+        &:hover {
+          img {
+            filter: invert(100%);
+          }
+        }
+      }
     }
   }
 </style>
