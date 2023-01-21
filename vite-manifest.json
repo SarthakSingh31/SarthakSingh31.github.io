@@ -7,13 +7,13 @@
     "file": "_app/immutable/assets/myuw-7f022a42.png",
     "src": "src/lib/images/myuw.png"
   },
-  "src/lib/images/vue-logo.svg": {
-    "file": "_app/immutable/assets/vue-logo-52c3881c.svg",
-    "src": "src/lib/images/vue-logo.svg"
-  },
   "src/lib/images/myuw-showcase.png": {
     "file": "_app/immutable/assets/myuw-showcase-028397df.png",
     "src": "src/lib/images/myuw-showcase.png"
+  },
+  "src/lib/images/vue-logo.svg": {
+    "file": "_app/immutable/assets/vue-logo-52c3881c.svg",
+    "src": "src/lib/images/vue-logo.svg"
   },
   "src/lib/images/play-store-logo.png": {
     "file": "_app/immutable/assets/play-store-logo-ba3a9390.png",
@@ -72,7 +72,7 @@
     "src": "src/lib/images/github-pr.svg"
   },
   "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-ebdc31f7.css",
+    "file": "_app/immutable/assets/_page-57fba28b.css",
     "src": "src/routes/+page.css"
   },
   "src/routes/+layout.ts": {
@@ -95,6 +95,14 @@
       "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte"
     ]
   },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-a8f70d72.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+    ]
+  },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
     "file": "_app/immutable/components/error.svelte-8af34464.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
@@ -104,16 +112,8 @@
       "_singletons-42f86896.js"
     ]
   },
-  ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-a8f70d72.js",
-    "src": ".svelte-kit/generated/nodes/1.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
-    ]
-  },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-faf42691.js",
+    "file": "_app/immutable/chunks/2-171f80d0.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
@@ -134,8 +134,11 @@
       "_index-53d8cde8.js"
     ]
   },
+  "_index-53d8cde8.js": {
+    "file": "_app/immutable/chunks/index-53d8cde8.js"
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-5af1f7df.js",
+    "file": "_app/immutable/start-052d3746.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -149,14 +152,14 @@
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-bfe94873.js",
+    "file": "_app/immutable/components/pages/_page.svelte-59be722a.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
       "_index-53d8cde8.js"
     ],
     "css": [
-      "_app/immutable/assets/_page-ebdc31f7.css"
+      "_app/immutable/assets/_page-57fba28b.css"
     ],
     "assets": [
       "_app/immutable/assets/android-logo-1095c9b2.ico",
@@ -178,8 +181,5 @@
       "_app/immutable/assets/github-fork-1b96312a.svg",
       "_app/immutable/assets/github-pr-e15364fd.svg"
     ]
-  },
-  "_index-53d8cde8.js": {
-    "file": "_app/immutable/chunks/index-53d8cde8.js"
   }
 }
