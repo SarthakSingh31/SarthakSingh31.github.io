@@ -237,7 +237,7 @@
         margin: 16px auto;
         width: 80vw;
 
-        button {
+        .close {
           background-color: unset;
           border: unset;
 
@@ -257,7 +257,6 @@
     }
 
     .modal[data-show="false"] {
-      // display: none;
       position: fixed;
       top: -100vh;
       bottom: 0;
