@@ -18,7 +18,7 @@
     )).value;
 
     fetch(
-      "http://34.123.210.24:80/api/v1/form?name=" +
+      "/api/v1/form?name=" +
         name +
         "&email=" +
         email +
