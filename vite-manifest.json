@@ -7,13 +7,13 @@
     "file": "_app/immutable/assets/myuw-7f022a42.png",
     "src": "src/lib/images/myuw.png"
   },
-  "src/lib/images/myuw-showcase.png": {
-    "file": "_app/immutable/assets/myuw-showcase-028397df.png",
-    "src": "src/lib/images/myuw-showcase.png"
-  },
   "src/lib/images/vue-logo.svg": {
     "file": "_app/immutable/assets/vue-logo-52c3881c.svg",
     "src": "src/lib/images/vue-logo.svg"
+  },
+  "src/lib/images/myuw-showcase.png": {
+    "file": "_app/immutable/assets/myuw-showcase-028397df.png",
+    "src": "src/lib/images/myuw-showcase.png"
   },
   "src/lib/images/play-store-logo.png": {
     "file": "_app/immutable/assets/play-store-logo-ba3a9390.png",
@@ -75,37 +75,12 @@
     "file": "_app/immutable/assets/_page-ebdc31f7.css",
     "src": "src/routes/+page.css"
   },
-  "_singletons-42f86896.js": {
-    "file": "_app/immutable/chunks/singletons-42f86896.js",
-    "imports": [
-      "_index-53d8cde8.js"
-    ]
-  },
-  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
-    "file": "_app/immutable/components/layout.svelte-dda78b0e.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-53d8cde8.js"
-    ]
-  },
-  "_index-53d8cde8.js": {
-    "file": "_app/immutable/chunks/index-53d8cde8.js"
-  },
   "src/routes/+layout.ts": {
     "file": "_app/immutable/modules/pages/_layout.ts-9cbb603b.js",
     "src": "src/routes/+layout.ts",
     "isEntry": true,
     "imports": [
       "__layout-da46b06b.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-bf43a3b1.js",
-    "src": ".svelte-kit/generated/nodes/2.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/+page.svelte"
     ]
   },
   "__layout-da46b06b.js": {
@@ -120,6 +95,15 @@
       "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte"
     ]
   },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "_app/immutable/components/error.svelte-8af34464.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-53d8cde8.js",
+      "_singletons-42f86896.js"
+    ]
+  },
   ".svelte-kit/generated/nodes/1.js": {
     "file": "_app/immutable/chunks/1-a8f70d72.js",
     "src": ".svelte-kit/generated/nodes/1.js",
@@ -128,8 +112,30 @@
       "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
     ]
   },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-faf42691.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+page.svelte"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
+    "file": "_app/immutable/components/layout.svelte-dda78b0e.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-53d8cde8.js"
+    ]
+  },
+  "_singletons-42f86896.js": {
+    "file": "_app/immutable/chunks/singletons-42f86896.js",
+    "imports": [
+      "_index-53d8cde8.js"
+    ]
+  },
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-58e6e443.js",
+    "file": "_app/immutable/start-5af1f7df.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -142,17 +148,8 @@
       ".svelte-kit/generated/nodes/2.js"
     ]
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-8af34464.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-53d8cde8.js",
-      "_singletons-42f86896.js"
-    ]
-  },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-a550d6e2.js",
+    "file": "_app/immutable/components/pages/_page.svelte-bfe94873.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
@@ -181,5 +178,8 @@
       "_app/immutable/assets/github-fork-1b96312a.svg",
       "_app/immutable/assets/github-pr-e15364fd.svg"
     ]
+  },
+  "_index-53d8cde8.js": {
+    "file": "_app/immutable/chunks/index-53d8cde8.js"
   }
 }
