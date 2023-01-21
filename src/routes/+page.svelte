@@ -31,11 +31,13 @@
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto+Mono:wght@400;600&display=swap"
     rel="stylesheet"
   />
+
+  <title>Sarthak Singh</title>
 </svelte:head>
 
 <div class="outer-container">
   <TopNav
-    logo={{ src: android_logo, alt: "Test" }}
+    logo={{ src: "favicon.png", alt: "Test" }}
     navLinks={[
       { link: "#about", text: "About Me" },
       { link: "#showcase", text: "Showcase" },

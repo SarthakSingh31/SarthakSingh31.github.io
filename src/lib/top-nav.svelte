@@ -73,10 +73,13 @@
     justify-content: space-between;
 
     .logo {
-      width: 48px;
-      margin-top: auto;
+      width: 36px;
       margin-bottom: auto;
       padding: 12px;
+
+      @include below-md {
+        margin-top: auto;
+      }
     }
 
     .list {
