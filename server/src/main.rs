@@ -1,4 +1,4 @@
-use std::{net::SocketAddr, sync::Arc};
+use std::sync::Arc;
 
 use axum::{
     extract::{Query, State},
@@ -6,7 +6,6 @@ use axum::{
     Router,
 };
 use axum_extra::routing::SpaRouter;
-use axum_server::tls_rustls::RustlsConfig;
 use sqlx::SqlitePool;
 
 #[derive(Clone)]
@@ -15,8 +14,6 @@ struct Pool(SqlitePool);
 #[derive(Debug, serde::Deserialize, Clone)]
 struct Config<'s> {
     asset_path: &'s str,
-    cert_path: &'s str,
-    priv_key_path: &'s str,
 }
 
 #[derive(Debug, serde::Deserialize)]
@@ -38,36 +35,15 @@ async fn main() {
             .unwrap(),
     ));
 
-    let pool_clone = pool.clone();
-    let http = async {
-        let app = Router::new()
-            .route("/api/v1/form", put(handle_form_put))
-            .merge(SpaRouter::new("/", config.asset_path).index_file("index.html"))
-            .with_state(pool_clone);
+    let app = Router::new()
+        .route("/api/v1/form", put(handle_form_put))
+        .merge(SpaRouter::new("/", config.asset_path).index_file("index.html"))
+        .with_state(pool);
 
-        axum::Server::bind(&"0.0.0.0:80".parse().unwrap())
-            .serve(app.into_make_service())
-            .await
-            .unwrap()
-    };
-
-    let https = async {
-        let app = Router::new()
-            .route("/api/v1/form", put(handle_form_put))
-            .merge(SpaRouter::new("/", config.asset_path).index_file("index.html"))
-            .with_state(pool);
-
-        let config = RustlsConfig::from_pem_file(config.cert_path, config.priv_key_path)
-            .await
-            .unwrap();
-
-        axum_server::bind_rustls(SocketAddr::from(([0, 0, 0, 0], 443)), config)
-            .serve(app.into_make_service())
-            .await
-            .unwrap()
-    };
-
-    tokio::join!(http, https);
+    axum::Server::bind(&"0.0.0.0:8080".parse().unwrap())
+        .serve(app.into_make_service())
+        .await
+        .unwrap()
 }
 
 async fn handle_form_put(State(pool): State<Arc<Pool>>, Query(data): Query<FormData>) {
